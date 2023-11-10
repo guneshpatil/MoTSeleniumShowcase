@@ -1,9 +1,11 @@
 package com.mot.showcase;
 
+import com.mot.showcase.utils.DriverUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,7 +17,7 @@ public class TheInternetAppTests {
   @BeforeClass
   public void getBrowser() {
     System.out.println("[Before Class] Current Thread: " + Thread.currentThread().getName());
-    webDriver = new ChromeDriver();
+    webDriver = DriverUtils.getWebDriver();
   }
 
   @BeforeMethod

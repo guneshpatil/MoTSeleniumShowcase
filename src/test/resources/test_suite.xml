@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MoT_TestBash_ShowCase" configfailurepolicy="continue" parallel="classes">
+<suite name="MoT_TestBash_ShowCase" configfailurepolicy="continue">
+  <listeners>
+    <listener class-name="com.mot.showcase.listeners.SuiteListener"/>
+  </listeners>
   <test name="parallelTests">
     <packages>
       <package name="com.mot.showcase"/>
